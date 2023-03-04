@@ -1,0 +1,103 @@
+import asyncio
+import json
+import time
+from typing import List, Tuple
+
+from web3.contract import Contract
+
+from app.utils.eth import w3
+from .pair import UniswapPair
+from app.utils.keystore.schemas.rpc import OrderDraft, OrderSide
+from .token import TokenContract
+from .schemas import Token
+
+
+class UniswapRouter:
+    contract = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D"
+    web3 = w3
+    abi = "abi/IUniswapV2Router02.json"
+    pair_contract = UniswapPair
+    token_contract = TokenContract
+
+    def __init__(self, order: OrderDraft, owner: str, private_key: str, log_extra):
+        self.order = order
+        self.pair = self.pair_contract(order.symbol)
+        self.log_extra = log_extra
+        self.owner = owner
+        self.private_key = private_key
+
+    async def swap(self) -> str:
+        await self._check_and_approve()
+        contract, swap_path, input_, output = await asyncio.gather(
+            self._contract(),
+            self.get_path(),
+            self.input_quantity_wei(),
+            self.get_amounts_out(),
+        )
+        transaction = contract.functions.swapExactTokensForTokens(
+            input_,
+            output,
+            swap_path,
+            self.owner,
+            int(time.time()) + 10 * 60,
+        ).buildTransaction(
+            {
+    "from": self.owner,
+    "nonce": self.web3.eth.get_transaction_count(self.owner),
+    "gasPrice": self.web3.eth.gas_price,
+},
+        )
+        signed_transaction = self.web3.eth.account.sign_transaction(transaction, self.private_key)
+        transaction_id = self.web3.eth.send_raw_transaction(signed_transaction.rawTransaction)
+        return transaction_id.hex()
+
+    async def get_amounts_out(self) -> int:
+        contract = await self._contract()
+        input_quantity_wei = await self.input_quantity_wei()
+        swap_path = await self.get_path()
+        return contract.functions.getAmountsOut(input_quantity_wei, swap_path).call()[
+    -1
+]
+
+    async def get_path(self) -> List[str
+]:
+        base, counter = await self._tokens()
+        swap_path = [base.address, counter.address
+]
+        if self.order.side == OrderSide.sell:
+            swap_path.reverse()
+        return [self.web3.eth.web3.toChecksumAddress(token) for token in swap_path
+]
+
+    async def input_quantity_wei(self) -> int:
+        base, counter = await self._tokens()
+        if self.order.side == OrderSide.sell:
+            input_quantity_wei = int(self.order.amount * 10**counter.decimals)
+        else:
+            input_quantity_wei = int(self.order.amount * 10**base.decimals)
+        return input_quantity_wei
+
+    async def _check_and_approve(self) -> None:
+        base, counter = await self._tokens()
+        token = counter if self.order.side == OrderSide.sell else base
+        token_contract = self.token_contract(token, self.owner, self.private_key)
+        await token_contract.check_and_approve(self.contract)
+
+    async def _tokens(self) -> Tuple[Token, Token
+]:
+        return await asyncio.gather(self.pair.base_coin(), self.pair.counter_coin())
+
+    @classmethod
+    async def decode_inputs(cls, inputs):
+        contract = await cls._contract()
+        return contract.decode_function_input(inputs)[
+    1
+]
+
+    @classmethod
+    async def _contract(cls) -> Contract:
+        with open(cls.abi, encoding="utf-8") as abi_file:
+            abi = json.load(abi_file)[
+    "abi"
+]
+        return cls.web3.eth.contract(address=cls.contract, abi=abi)
