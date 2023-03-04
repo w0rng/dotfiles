@@ -1,0 +1,10 @@
+com.paperetto.dash
+com.4lex4.intellij.solarized
+io.haringsrob.hide-titlebar
+name.kropp.intellij.makefile
+GrepConsole
+com.leinardi.pycharm.mypy
+ru.meanmail.plugin.requirements
+IdeaVIM
+com.github.copilot
+mobi.hsz.idea.gitignore

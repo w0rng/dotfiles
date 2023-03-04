@@ -1,0 +1,313 @@
+<templateSet group="c4">
+  <template name="c4_level_1_context_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Context.puml&#10;&#10;title System Context Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="Bash" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_level_2_container_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml&#10;&#10;title Container Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="Bash" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_level_3_component_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml&#10;&#10;title Component Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="Bash" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_boundary_system" value="System_Boundary($END$alias, &quot;label&quot;) {&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_relation" value="Rel($END$from, to, &quot;label&quot;, &quot;technology&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_component" value="Component($END$alias, &quot;label&quot;, &quot;technology&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_person" value="Person($END$alias, &quot;label&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_system" value="System($END$alias, &quot;label&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_container_db" value="ContainerDb($END$alias, &quot;label&quot;, &quot;technology&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_system_db" value="SystemDb($END$, &quot;label&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_system_db_ext" value="SystemDb_Ext($END$alias, &quot;label&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_system_ext" value="System_Ext($END$alias, &quot;label&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_boundary_enterprise" value="Enterprise_Boundary($END$alias, &quot;label&quot;) {&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_boundary_container" value="Container_Boundary($END$alias, &quot;label&quot;) {&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_component_db" value="ComponentDb($END$alias, &quot;label&quot;, &quot;technology&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_container" value="Container($END$alias, &quot;label&quot;, &quot;technology&quot;, &quot;description&quot;)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_supplementary_landscape_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Context.puml&#10;&#10;title System Landscape Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_supplementary_dynamic_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml&#10;&#10;title Dynamic Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_supplementary_deployment_diagram" value="@startuml&#10;!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Container.puml&#10;&#10;title Deployment Diagram for $END$&#10;&#10;@enduml&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_layout_" value="Lay_$END$(e_from, e_to)" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_boundary_deployment" value="Boundary($END$alias, &quot;label&quot;, &quot;Deployment Node: &quot;) {&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+  <template name="c4_boundary" value="Boundary($END$alias, &quot;label&quot;, &quot;type&quot;) {&#10;&#10;}" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="AsciiDoc" value="false" />
+      <option name="GROOVY" value="false" />
+      <option name="HTML" value="false" />
+      <option name="JAVA_CODE" value="false" />
+      <option name="JSON" value="false" />
+      <option name="KOTLIN" value="false" />
+      <option name="MAVEN" value="false" />
+      <option name="OTHER" value="true" />
+      <option name="SHELL_SCRIPT" value="false" />
+      <option name="XML" value="false" />
+    </context>
+  </template>
+</templateSet>

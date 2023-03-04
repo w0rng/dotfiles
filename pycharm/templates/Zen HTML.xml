@@ -1,0 +1,8 @@
+<templateSet group="Zen HTML">
+  <template name="link:favicon" value="&lt;link rel=&quot;shortcut icon&quot; href=&quot;$FAVICON$&quot; type=&quot;image/x-icon&quot;&gt;" description="&lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt;" toReformat="true" toShortenFQNames="true" deactivated="true">
+    <variable name="FAVICON" expression="" defaultValue="&quot;favicon.ico&quot;" alwaysStopAt="true" />
+    <context>
+      <option name="JSX_HTML" value="true" />
+    </context>
+  </template>
+</templateSet>
