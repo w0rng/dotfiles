@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
 plugins=(git docker docker-compose pip tmux pipenv zsh-autosuggestions)
@@ -29,3 +31,6 @@ alias f="fuck"
 alias tunnel='/Users/w0rng/Projects/w0rng/scripts/port_forvarding.sh'
 alias dps='docker ps -a --format "table {{.Label \"com.docker.compose.project\"}}\t{{.Label \"com.docker.compose.service\"}}\t{{.ID}}\t{{.Names}}\t{{.Status}}"'
 alias m='make'
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
