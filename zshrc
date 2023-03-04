@@ -6,6 +6,7 @@ plugins=(git docker docker-compose pip tmux pipenv zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 export PATH="/opt/homebrew/opt/openssl@1.1/bin:$PATH"
+export PATH="/Users/w0rng/Library/Python/3.10/bin:$PATH"
 
 eval $(thefuck --alias)
 
