@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
+CONFIG="configs/dotbot/install.conf.yaml"
 DOTBOT_DIR=".local/dotbot"
 DOTBOT_PLUGIN_DIR=".local/plugins"
 

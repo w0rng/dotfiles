@@ -6,18 +6,18 @@
     - ~/.config
 
 - link:
-    ~/.config/yabai: yabai
-    ~/.config/alacritty: alacritty
-    ~/.config/karabiner: karabiner
-    ~/.config/doom: doom
-    ~/.config/nvim: nvim
-    ~/.config/skhd: skhd
-    ~/.config/lazydocker: lazydocker
-    ~/.config/lazygit: lazygit
-    ~/.gitconfig: .gitconfig
+    ~/.config/yabai: configs/yabai
+    ~/.config/alacritty: configs/alacritty
+    ~/.config/karabiner: configs/karabiner
+    ~/.config/doom: configs/doom
+    ~/.config/nvim: configs/nvim
+    ~/.config/skhd: configs/skhd
+    ~/.config/lazydocker: configs/lazydocker
+    ~/.config/lazygit: configs/lazygit
+    ~/.gitconfig: configs/git/gitconfig
     # python
-    ~/.isort.cfg: python/isort.cfg
-    ~/.config/flake8: python/flake8
+    ~/.isort.cfg: configs/python/isort.cfg
+    ~/.config/flake8: configs/python/flake8
 
 - tap:
     - d12frosted/emacs-plus

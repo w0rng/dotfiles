@@ -1,0 +1,68 @@
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".hg",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "venv",
+    ".venv",
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+fixable = ["ALL"]
+ignore = ["Q000", "D", 'RUF001', "ANN101", "ANN102", 'ANN104']
+
+
+[tool.ruff.format]
+quote-style = "single"
+skip-magic-trailing-comma = false
+indent-style = "space"
+line-ending = "auto"
+
+[tool.djlint]
+profile = "django"
+max_blank_lines = 1
+custom_html = "turbo-frame"
+max_line_length = 80
+indent = 4
+close_void_tags = true
+
+[tool.pyright]
+include = ["."]
+executionEnvironments = [{ root = "." }, { root = "apps" }]
+
+[tool.flake8]
+ignore = [
+    'WPS306',
+    'WPS602',
+    'I004',
+    'I001',
+    'DAR101',
+    'DAR201',
+    'WPS348',
+    'WPS323',
+    'WPS305',
+    'WPS332',
+    'Q000',
+    'D',
+]
+max-line-length = 120
+max-base-classes = 4
