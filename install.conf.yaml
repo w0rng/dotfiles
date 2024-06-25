@@ -48,5 +48,8 @@
     - pycharm
     - jetbrains-toolbox
 
+- firefox:
+    user.js: firefox/user.js
+
 - shell:
     - [ git submodule update --init --recursive, Installing submodules ]
