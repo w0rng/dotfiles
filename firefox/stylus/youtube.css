@@ -1,0 +1,44 @@
+@-moz-document domain("youtube.com") {
+    /*div#dismissible > ytd-thumbnail {
+        display: none;
+    }*/
+
+    ytd-shelf-renderer.style-scope {
+        padding: 25px 0 25px 0;
+    }
+
+
+    yt-formatted-string#description-text {
+        display: none;
+    }
+
+    yt-img-shadow {
+        display: none;
+    }
+
+    div#dismissible > div.grid-subheader {
+        display: none;
+    }
+
+    yt-formatted-string#description-text {
+        display: none !important;
+    }
+
+    div#metadata-line,
+    div#separator {
+        display: none !important;
+    }
+
+    #video-title {
+        margin-bottom: 20px !important;
+        font-size: x-large !important;
+    }
+
+    button[aria-label="Создать"] {
+        display: none !important;
+    }
+
+    div#title-wrapper {
+        display: block !important;
+    }
+}

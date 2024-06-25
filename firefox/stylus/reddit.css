@@ -1,0 +1,49 @@
+@-moz-document domain("reddit.com") {
+    nav > div > faceplate-tracker {
+        background-image: url('https://raw.githubusercontent.com/zenstorage/others/main/reddit.webp') !important;
+        background-position: left !important;
+        background-size: 80% !important;
+        background-repeat: no-repeat !important;
+
+        & svg {
+            opacity: 0 !important;
+        }
+    }
+
+
+    #left-sidebar-container,
+    #right-sidebar-container {
+        display: none !important;
+    }
+
+    .subgrid-container {
+
+        grid-column-start: 3 !important;
+        grid-column-end: 13 !important;
+    }
+
+    .main-container {
+        display: block !important;
+    }
+
+    .sidebar-grid > #main-content {
+        grid-column-start: 3 !important;
+        grid-column-end: 13 !important;
+    }
+
+    article {
+        margin: 5rem 0 4rem 0 !important;
+    }
+
+    .pl-lg > div:nth-child(2) {
+        display: none !important;
+    }
+
+    reddit-header-large {
+        position: absolute !important;
+    }
+
+    shreddit-async-loader.relative, shreddit-post-share-button {
+        display: none !important;
+    }
+}
