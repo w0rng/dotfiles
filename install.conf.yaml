@@ -45,6 +45,8 @@
     - raycast
     - vscodium
     - insomnium
+    - pycharm
+    - jetbrains-toolbox
 
 - shell:
     - [ git submodule update --init --recursive, Installing submodules ]
