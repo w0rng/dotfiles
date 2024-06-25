@@ -1,0 +1,325 @@
+{
+    "title": "Home row keas as cmd",
+    "rules": [
+        {
+            "description": "command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "j"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "j"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_command",
+                            "halt": true
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "f"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "f"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "right_command",
+                            "halt": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "shift",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "g"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "g"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_shift",
+                            "halt": true
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "h"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "right_shift",
+                            "halt": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "option",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "d"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_option",
+                            "halt": true
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "k"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "k"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "right_option",
+                            "halt": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "control",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "s"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "s"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_control",
+                            "halt": true
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l"
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "l"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "right_control",
+                            "halt": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "f + j as delete",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "f"
+                            },
+                            {
+                                "key_code": "j"
+                            }
+                        ]
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "g + h as enter",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "simultaneous": [
+                            {
+                                "key_code": "g"
+                            },
+                            {
+                                "key_code": "h"
+                            }
+                        ]
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Swap ; and :",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ],
+                            "optional": [
+                                "caps_lock"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "p"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.Colemak"
+                                }
+                            ],
+                            "type": "input_source_if"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "p",
+                        "modifiers": {
+                            "optional": [
+                                "caps_lock"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "p",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.Colemak"
+                                }
+                            ],
+                            "type": "input_source_if"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Swap - and _",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "hyphen",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "hyphen"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.Colemak"
+                                }
+                            ],
+                            "type": "input_source_if"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "hyphen"
+                    },
+                    "to": [
+                        {
+                            "key_code": "hyphen",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "input_sources": [
+                                {
+                                    "input_source_id": "com.apple.keylayout.Colemak"
+                                }
+                            ],
+                            "type": "input_source_if"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

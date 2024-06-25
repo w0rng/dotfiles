@@ -1,0 +1,20 @@
+- defaults:
+    link:
+      relink: true
+
+- create:
+    - ~/.config
+
+- link:
+    ~/.config/yabai: yabai
+    ~/.config/alacritty: alacritty
+    ~/.config/karabiner: karabiner
+    ~/.config/doom: doom
+    ~/.config/nvim: nvim
+    ~/.config/skhd: skhd
+    ~/.config/lazydocker: lazydocker
+    ~/.config/lazygit: lazygit
+    ~/.config/fish: fish
+
+- shell:
+    - [ git submodule update --init --recursive, Installing submodules ]

@@ -1,0 +1,17 @@
+import = ["/Users/w0rng/.config/alacritty/themes/solarized_light.toml"]
+live_config_reload = true
+
+[font]
+size = 14
+
+[font.normal]
+family = "SFMono Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+
+[window.padding]
+x = 20
+y = 25

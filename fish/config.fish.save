@@ -1,0 +1,32 @@
+set -g fish_greeting
+
+if status is-interactive
+    starship init fish | source
+end
+
+pyenv init - | source
+
+export PATH="/Users/w0rng/yandex-cloud/bin/:$PATH"
+
+alias activate="source .venv/bin/activate.fish"
+alias m="make"
+alias dps='docker ps -a --format "table {{.Label \"com.docker.compose.project\"}}\t{{.Label \"com.docker.compose.service\"}}\t{{.ID}}\t{{.Names}}\t{{.Status}}"'
+export LEDGER_FILE=/Users/w0rng/finance/main.journal
+export GOROOT="$(brew --prefix golang)/libexec"
+
+export GPG_TTY=$(tty)
+gpgconf --launch gpg-agent
+
+
+set CONFIG_PATH ~/.config/alacritty/alacritty.toml
+
+function set_alacritty_theme
+    set system_theme (defaults read -g AppleInterfaceStyle)
+    if test "$system_theme" = "Dark"
+        sed -i '' -e 's/solarized_light/solarized_dark/' $CONFIG_PATH
+    else
+        sed -i '' -e 's/solarized_dark/solarized_light/' $CONFIG_PATH
+    end
+end
+
+set_alacritty_theme

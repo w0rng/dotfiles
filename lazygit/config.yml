@@ -1,0 +1,9 @@
+gui:
+  language: 'ru'
+  border: 'rounded'
+  showRandomTip: false
+  nerdFontsVersion: "3"
+  showListFooter: false
+  showBottomLine: false
+git:
+  branchLogCmd: 'git log --graph --color=always --abbrev-commit --decorate --date=relative --pretty=medium --oneline {{branchName}} --'
