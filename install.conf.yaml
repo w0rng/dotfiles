@@ -14,7 +14,10 @@
     ~/.config/skhd: skhd
     ~/.config/lazydocker: lazydocker
     ~/.config/lazygit: lazygit
-    ~/.config/fish: fish
+    ~/.gitconfig: .gitconfig
+    # python
+    ~/.isort.cfg: python/isort.cfg
+    ~/.config/flake8: python/flake8
 
 - shell:
     - [ git submodule update --init --recursive, Installing submodules ]
