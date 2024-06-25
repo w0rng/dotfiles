@@ -5,3 +5,6 @@
 [submodule ".local/plugins/brew"]
 	path = .local/plugins/brew
 	url = https://github.com/d12frosted/dotbot-brew.git
+[submodule ".local/plugins/firefox"]
+	path = .local/plugins/firefox
+	url = https://github.com/kurtmckee/dotbot-firefox.git
