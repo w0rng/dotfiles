@@ -6,6 +6,7 @@
     - ~/.config
 
 - link:
+    ~/.config/fish: configs/fish
     ~/.config/yabai: configs/yabai
     ~/.config/alacritty: configs/alacritty
     ~/.config/karabiner: configs/karabiner
