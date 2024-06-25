@@ -1,0 +1,11 @@
+[user]
+	name = w0rng
+	email = work@w0rng.ru
+[core]
+	autocrlf = input
+[init]
+	defaultBranch = main
+[credential]
+	helper = osxkeychain
+[gitlab]
+	user = w0rng
