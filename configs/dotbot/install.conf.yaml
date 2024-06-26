@@ -25,6 +25,7 @@
     - koekeishiya/formulae
 
 - brew:
+    - vegeta
     - bandit
     - bat
     - fish
@@ -48,6 +49,15 @@
     - insomnium
     - pycharm
     - jetbrains-toolbox
+    - firefox
+    - outline
+    - 1password
+    - orbstack
+    - telegram
+    - shottr
+    - appcleaner
+    - keka
+    - anydesk
 
 - firefox:
     user.js: firefox/user.js
