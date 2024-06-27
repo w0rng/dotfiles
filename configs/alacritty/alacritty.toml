@@ -19,3 +19,7 @@ dynamic_padding = false
 [window.padding]
 x = 10
 y = 0
+
+[cursor]
+style = "Beam"
+thickness = 0.2
