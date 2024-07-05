@@ -27,6 +27,8 @@
 - brew:
     - bandit
     - bat
+    - lsd
+    - cookiecutter
     - fish
     - fzf
     - neovim
