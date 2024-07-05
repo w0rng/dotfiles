@@ -72,7 +72,7 @@ shift + ctrl - left : yabai -m window --stack west
 #   | jq -sre "add | sort_by(.display, .frame.x, .frame.y, .id) | nth(index(map(select(.focused == 1)))).id" \
 #   | xargs -I{} yabai -m window {} --insert stack
 
-cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
+#cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 shift + cmd - left : yabai -m space --move prev
 shift + cmd - right : yabai -m space --move next
