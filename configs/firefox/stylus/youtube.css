@@ -1,44 +1,86 @@
-@-moz-document domain("youtube.com") {
-    /*div#dismissible > ytd-thumbnail {
-        display: none;
-    }*/
+ytd-rich-item-renderer {
+    --ytd-rich-grid-items-per-row: 4;
+}
 
-    ytd-shelf-renderer.style-scope {
-        padding: 25px 0 25px 0;
-    }
+ytd-app[mini-guide-visible] ytd-page-manager.ytd-app {
+    margin-left: 0 !important;
+}
 
+ytd-watch-flexy[flexy] {
+    --ytd-watch-flexy-width-ratio: 20;
+}
 
-    yt-formatted-string#description-text {
-        display: none;
-    }
+#masthead > div:nth-child(5) > div:nth-child(3) {
+    display: none !important;
+}
 
-    yt-img-shadow {
-        display: none;
-    }
+ytd-mini-guide-renderer.style-scope,
+div.ytd-masthead:nth-child(1) > yt-icon-button:nth-child(3) {
+    display: none !important;
+}
 
-    div#dismissible > div.grid-subheader {
-        display: none;
-    }
+#chips-wrapper,
+ytd-rich-grid-renderer.style-scope > div:nth-child(1) {
+    display: none !important;
+}
 
-    yt-formatted-string#description-text {
-        display: none !important;
-    }
+#voice-search-button {
+    display: none !important;
+}
 
-    div#metadata-line,
-    div#separator {
-        display: none !important;
-    }
+#gs_st50 {
+    display: none !important;
+}
 
-    #video-title {
-        margin-bottom: 20px !important;
-        font-size: x-large !important;
-    }
+#avatar-container {
+    display: none !important;
+}
 
-    button[aria-label="Создать"] {
-        display: none !important;
-    }
+#metadata-line > span:nth-child(3) {
+    display: none !important;
+}
 
-    div#title-wrapper {
-        display: block !important;
-    }
+#metadata {
+    flex-direction: row !important;
+}
+
+#masthead > div:nth-child(5) {
+    align-items: center;
+    justify-content: center;
+}
+
+#start {
+    display: none !important;
+}
+
+#menu {
+    display: none !important;
+}
+
+#secondary {
+    display: none !important;
+}
+
+#comments {
+    display: none !important;
+}
+
+#clarify-box {
+    display: none !important;
+}
+
+#content {
+    width: 90% !important;
+    margin-left: 5% !important;
+}
+
+ytd-searchbox.ytd-masthead,
+#container.ytd-searchbox {
+    margin-left: 0 !important;
+}
+
+#masthead-container.ytd-app {
+    max-width: 50% !important;
+    margin-left: 20% !important;
+    position: absolute !important;
 }
