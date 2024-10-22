@@ -4,124 +4,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "enable simple birman layout",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Russian" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_option",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "input_source_was_russian",
-                                            "value": 1
-                                        }
-                                    },
-                                    {
-                                        "set_variable": {
-                                            "name": "input_source_was_colemak",
-                                            "value": 0
-                                        }
-                                    },
-                                    { "select_input_source": { "input_source_id": "org.unknown.keylayout.simplebirman" } }
-                                ],
-                                "to_after_key_up": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Russian" } }],
-                                "to_if_alone": [],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "input_source_id": "com.apple.keylayout.Colemak" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_option",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "input_source_was_russian",
-                                            "value": 0
-                                        }
-                                    },
-                                    {
-                                        "set_variable": {
-                                            "name": "input_source_was_colemak",
-                                            "value": 1
-                                        }
-                                    },
-                                    { "select_input_source": { "input_source_id": "org.unknown.keylayout.simplebirman" } }
-                                ],
-                                "to_after_key_up": [{ "select_input_source": { "input_source_id": "com.apple.keylayout.Colemak" } }],
-                                "to_if_alone": [],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Switch to Strata Markdown layout when holding right Option and revert to previous layout on release without conflicts",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [
-                                            { "input_source_id": "com.apple.keylayout.Russian" },
-                                            { "input_source_id": "com.apple.keylayout.Colemak" }
-                                        ],
-                                        "type": "input_source_if"
-                                    },
-                                    {
-                                        "name": "right_option_pressed",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "right_option",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "right_option_pressed",
-                                            "value": 1
-                                        }
-                                    },
-                                    { "select_input_source": { "input_source_id": "org.sil.ukelele.keyboardlayout.stratamarkdownlayout050.russian—stratamarkdown" } }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "right_option_pressed",
-                                            "value": 0
-                                        }
-                                    },
-                                    { "select_input_source": { "input_source_id": "com.apple.keylayout.Russian" } }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "conditions": [
-                            {
-                                "input_sources": [
-                                    { "input_source_id": "com.apple.keylayout.Russian" },
-                                    { "input_source_id": "com.apple.keylayout.Colemak" }
-                                ],
-                                "type": "input_source_if"
-                            }
-                        ],
                         "description": "Swap ; and :",
                         "manipulators": [
                             {
@@ -180,21 +62,12 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "right_command" }],
-                                "to_if_alone": [{ "select_input_source": { "input_source_id": "^com.apple.keylayout.Russian$" } }],
+                                "to_if_alone": [{ "select_input_source": { "input_source_id": "^org.sil.ukelele.keyboardlayout.stratamarkdownlayout050.russian—stratamarkdown$" } }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "conditions": [
-                            {
-                                "input_sources": [
-                                    { "input_source_id": "com.apple.keylayout.Russian" },
-                                    { "input_source_id": "com.apple.keylayout.Colemak" }
-                                ],
-                                "type": "input_source_if"
-                            }
-                        ],
                         "description": "Swap - and _",
                         "manipulators": [
                             {

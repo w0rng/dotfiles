@@ -20,7 +20,7 @@ response = requests.get(
 selector = Selector(text=response.text)
 first_price = int(
     selector.xpath(
-        '/html/body/div[2]/main/div[2]/div[2]/div/div[2]/div[1]/div/div[2]/div/a[1]/child::node()[last()]',
+        '/html/body/div[3]/main/div[2]/div[2]/div/div[2]/div[1]/div/div[2]/div/a[1]/child::node()[last()]',
     )
     .get()
     .replace(' ', '')
@@ -33,7 +33,7 @@ response = requests.get(
 selector = Selector(text=response.text)
 last_price = int(
     selector.xpath(
-        '/html/body/div[2]/main/div[2]/div[2]/div/div[2]/div[1]/div/div[2]/div/a[1]/child::node()[last()]',
+        '/html/body/div[3]/main/div[2]/div[2]/div/div[2]/div[1]/div/div[2]/div/a[1]/child::node()[last()]',
     )
     .get()
     .replace(' ', '')

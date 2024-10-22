@@ -1,4 +1,4 @@
-import = ["/Users/w0rng/.config/alacritty/themes/solarized_light.toml"]
+import = ["/Users/w0rng/.config/alacritty/themes/solarized_dark.toml"]
 live_config_reload = true
 
 [font]
@@ -13,7 +13,7 @@ x = 0
 y = 10
 
 [window]
-decorations = "buttonless"
+#decorations = "buttonless"
 dynamic_padding = false
 
 [window.padding]
