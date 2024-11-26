@@ -26,6 +26,7 @@
   },
   "ui_font_weight": 300,
   "ui_font_family": "FiraCode Nerd Font",
+  "ui_font_size": 15,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -81,7 +82,7 @@
     "indent_guides": {
       "show": "never"
     },
-    "git_status": false,
+    "git_status": true,
     "indent_size": 16
   },
   "outline_panel": {
