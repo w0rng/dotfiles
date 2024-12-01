@@ -18,19 +18,27 @@
     ~/.config/flake8: configs/python/flake8
 
 - brew:
-    - bandit
+    # python
+    - uv
+    - ruff
+    - pyenv
+    # terminal
     - bat
     - fish
     - fzf
-    - pyenv
     - starship
     - thefuck
-    - uv
-    - mas-cli/tap/mas
+    - mas
+    - rm-improved
+    - lsd
+    # apps
+    - lazygit
+    - lazydocker
 
 - cask:
     - alacritty
     - font-fira-code
+    - font-fira-code-nerd-font
     - obsidian
     - raycast
     - orbstack
@@ -38,6 +46,8 @@
     - shottr
     - appcleaner
     - keka
+    - karabiner-elements
+    - zed
 
 - app-store:
     # safari extensions
