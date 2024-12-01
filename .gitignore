@@ -2,4 +2,3 @@ configs/zed/**/*
 !configs/zed/**/*.json
 .idea
 .venv
-.local

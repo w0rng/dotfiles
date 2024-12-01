@@ -4,4 +4,4 @@
 	ignore = dirty
 [submodule ".local/plugins/brew"]
 	path = .local/plugins/brew
-	url = https://github.com/d12frosted/dotbot-brew.git
+	url = https://github.com/w0rng/dotbot-brew.git
