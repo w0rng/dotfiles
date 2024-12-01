@@ -17,7 +17,7 @@
     "folds": true,
     "code_actions": true,
     "line_numbers": false,
-    "runnables": false
+    "runnables": true
   },
   "ui_font_weight": 300,
   "ui_font_family": "FiraCode Nerd Font",
@@ -43,10 +43,32 @@
   "lsp": {
     "gopls": {
       "initialization_options": {
+        "usePlaceholders": true,
+        "completeUnimported": true,
+        "directoryFilters": ["-**/.git"],
+        "gofumpt": true,
+        "symbolScope": "workspace",
+        "staticcheck": true,
+        "templateExtensions": ["tmpl"],
+        "experimentalPostfixCompletions": true,
+        "analyses": {
+          "nilness": true,
+          "unusedparams": true,
+          "unusedvariable": true,
+          "unusedwrite": true,
+          "useany": true
+        },
+        "codelenses": {
+          "gc_details": true
+        },
         "hints": {
+          "assignVariableTypes": false,
           "compositeLiteralFields": true,
+          "compositeLiteralTypes": true,
           "constantValues": true,
-          "parameterNames": true
+          "functionTypeParameters": true,
+          "parameterNames": true,
+          "rangeVariableTypes": false
         }
       }
     }
@@ -68,7 +90,8 @@
   "languages": {
     "Go": {
       "hard_tabs": true,
-      "tab_size": 3
+      "tab_size": 3,
+      "language_servers": ["gopls", "golangci-lint"]
     }
   },
   "indent_guides": {
@@ -86,5 +109,8 @@
     "indent_guides": {
       "show": "never"
     }
+  },
+  "inlay_hints": {
+    "enabled": true
   }
 }
