@@ -6,7 +6,6 @@
     },
     "version": "2"
   },
-  "theme": "Alabaster",
   "base_keymap": "JetBrains",
   "buffer_font_size": 14,
   "buffer_font_family": "JetBrains Mono",
@@ -14,10 +13,6 @@
   "buffer_font_weight": 300,
   "buffer_line_height": "standard",
   "current_line_highlight": "none",
-  "tabs": {
-    "close_position": "left",
-    "activate_on_close": "neighbour"
-  },
   "gutter": {
     "folds": true,
     "code_actions": true,
@@ -31,6 +26,7 @@
     "diagnostics": false,
     "metrics": false
   },
+  "auto_update": false,
   "autosave": {
     "after_delay": {
       "milliseconds": 1000
